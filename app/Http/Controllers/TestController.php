@@ -23,16 +23,7 @@ class TestController extends Controller
         $pusher->trigger('my-channel', 'my-event', $data);    
     }
 
-
-    public function test() {
-        $arr = [
-            'msg' => 'Test data',
-            'version' => 2
-        ];
-        event(new StatusLiked($arr));
-        return "Event has been sent!";
-    }
-
+   
     public function index() {
         return view('real-time');
     }
